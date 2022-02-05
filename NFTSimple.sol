@@ -37,6 +37,10 @@ contract NFTSimple {
     return _ownedTokens[owner].length;
 }
 
+ function balance (address _addr) public view returns(uint){
+          return balanceOf(_addr);
+      }
+
     function safeTransferFrom(address from, address to, uint256 tokenId, bytes memory _data) public{
         require(from == msg.sender, "from !- msg.sender"); // 보내는 사람이 현재 이 함수를 실행한 주체 
         require(from == tokenOwner[tokenId], "you are not the owner of the token"); // 보내는 사람이 보내려고 하는 토큰의 주인
