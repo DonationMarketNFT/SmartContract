@@ -39,8 +39,7 @@ contract NFTSimple is KIP17Full {
     function mintWithTokenURI2(address to, string memory tokenURI, uint256 num) public returns (bool) {
         // 사용자(to)에게 tokenId(일련번호)를 1씩 증가시키며 num개 발행
         // 적힐 글자는 tokenURI 
-        uint256 tokenId;
-        _tokenIds[tokenURI].length == 0 ? tokenId = 0 : tokenId = _tokenIds[tokenURI].length;
+        uint256 tokenId = _tokenIds[tokenURI].length;
         for (uint i = tokenId; i < tokenId+num; i++) {
         tokenOwner[i] = to;
         tokenURIs[i] = tokenURI;
