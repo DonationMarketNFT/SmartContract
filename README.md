@@ -13,7 +13,7 @@ mintWithTokenURI2 : 사용자가 기부할 때마다 금액에 맞는 수량을 
 <br/>
 <br/>
 
-## DecreaseMinting.sol
+## DecreaseMinting.sol [in Developing]
 
 mintWithTokenURI : 기부자에게 N개의 token을 발행
 
